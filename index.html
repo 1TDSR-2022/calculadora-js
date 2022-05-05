@@ -5,8 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CALC-JS</title>
+    <script src="./js/script.js" defer></script>
 </head>
 <body>
         <h1>MINHA CALCULADORA JS</h1>
+        <div>
+            <form action="index.html" method="get" id="frmCalc">
+                <!--
+                    Calculadora em JavaScript
+                -->
+                <fieldset>
+                    <legend>CALCULADORA</legend>
+                    <div>
+                        <input type="text" name="visor" id="visorId">
+                    </div>
+              </fieldset>
+              <fieldset>
+                <legend>OPERAÇÃO</legend>
+                  <div>
+                    <select name="operacoes" id="operacoesId">
+                    <option value="soma">SOMA</option>
+                    <option value="subtracao">SUBTRAÇÃO</option>
+                    <option value="multiplicacao">MULTIPLICAÇÃO</option>
+                    <option value="divisao">DIVISÃO</option>
+                </select>
+                  </div>
+              </fieldset>
+              <fieldset>
+                  <legend>NÚMEROS</legend>
+                  <div>
+                      <input type="button" name="numero1" id="numero1" value="1">
+                  </div>
+                  <div>
+                      <input type="button" name="numero2" id="numero2Id" value="2">
+                  </div>
+              </fieldset>
+              <div>
+                  <input type="button" name="calcular" id="calcularId" value="CALULAR">
+              </div>
+            </form>
+        </div>
 </body>
 </html>
