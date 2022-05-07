@@ -48,6 +48,50 @@
 
 //REcuperar elementos do DOM com querySelector
 //const elemtoForm = document.querySelector("#frmCalc");
-document.querySelector("#numero1Id").addEventListener("click, function(){
+//document.querySelector("#numero1Id").addEventListener("click, function(){
+    //minhaFuncao("EventListener")
+//})
 
-})
+//Function em javascript é uma função que pode ser chamada de várias formas
+//Functions são escritas entre parênteses e são globais ou locais, o mais comum é global;
+// function minhaFuncao(){
+//    console.log("Executando minha funcao");
+//}
+
+//Passando parâmetros para a função
+//function minhaFuncao(){
+    //console.log("Executando minha função : " + origem);
+//}
+
+document.querySelector("#numeroId").addEventListener("click",function(){
+    //Recuperar o valor do input button1 e colocar no visor
+    const visor = document.querySelector("#visorId");
+    if(visor.value == "0"){
+        visor.value = "1";
+    }else{
+        //visor.value += document.querySelector("#numero1Id").value;
+        visor.value += this.value;
+    }        
+    })
+
+document.querySelector("#numeroId").addEventListener("click",function(){
+    //Recuperar o valor do input button2 e colocar no visor
+    const visor = document.querySelector("#visorId");
+    if(visor.value == "0"){
+        visor.value = "2";
+    }else{
+        //visor.value += document.querySelector("#numero1Id").value;
+        visor.value += this.value;
+    }        
+    })
+
+    //Criar uma função para colocar o valor no visor
+    function colocarNoVisor(valor){
+        //Vamos passar o value dos inputs button1 e button2 para o visor
+    const visor = document.querySelector("#visorId");
+    if(visor.value == "0"){
+        visor.value = valor;
+    }
+    else{
+        visor.value += valor;
+    }
