@@ -63,7 +63,7 @@
 //     console.log('Executando minha função : ' +  origem);
 // }
 
-document.querySelector('#numero1Id').addEventListener('click', () =>{
+//document.querySelector('#numero1Id').addEventListener('click', () =>{
     //Recuperar o valor do input button1 e colocar no visor
     // const visor = document.querySelector('#visorId');
     // if(visor.value == '0'){
@@ -73,11 +73,11 @@ document.querySelector('#numero1Id').addEventListener('click', () =>{
     // }
 
     //Recuperar o valor do input button1 e colocar no visor
-    colocarNoVisor(this.value);
+    //colocarNoVisor(this.value);
 
-})
+//})
 
-document.querySelector('#numero2Id').addEventListener('click', function(){
+//document.querySelector('#numero2Id').addEventListener('click', function(){
     //Recuperar o valor do input button2 e colocar no visor
     // const visor = document.querySelector('#visorId');
     // if(visor.value == '0'){
@@ -88,36 +88,61 @@ document.querySelector('#numero2Id').addEventListener('click', function(){
     // }
 
     //Chamando a função para colocar o valor no visor
-    colocarNoVisor(this.value);
+  //  colocarNoVisor(this.value);
 
-})
+//})
 
-document.querySelector('#btnSomaId').addEventListener('click', () =>{
+//document.querySelector('#btnSomaId').addEventListener('click', () =>{
     //colocarOperador(this.value);
-    document.querySelector('#numero1Id').value += 1
-})
+  //  document.querySelector('#numero1Id').value += 1
+//})
 
 //Criar uma função para colocar o valor no visor
-function colocarNoVisor(valor){
+//function colocarNoVisor(valor){
     //Vamos passar o value dos inputs button1 e button2 para o visor
-    const visor = document.querySelector('#visorId');
-    if(visor.value == '0'){
-        visor.value = valor;
-    }
-    else{
-        visor.value += valor
-    }
-}
+    //const visor = document.querySelector('#visorId');
+    //if(visor.value == '0'){
+      //  visor.value = valor;
+    //}
+    //else{
+    //    visor.value += valor
+  //  }
+//}
 
-function colocarOperador(valor){
-    const visor = document.querySelector('#visorId');
-    if(valor != visor.value.charAt(visor.value.length - 1)){
-        visor.value += valor;
-    }
-}
+//function colocarOperador(valor){
+    //const visor = document.querySelector('#visorId');
+    //if(valor != visor.value.charAt(visor.value.length - 1)){
+    //    visor.value += valor;
+  //  }
+//}
 
 //Ligar/desligar lampada pelo mouse
-const elementoLigar=document.querySelector("#ligarId")
+//const elementoLigar=document.querySelector("#ligarId")
+//const elementoDesligar=document.querySelector("#desligarId")
+
+//elementoLigar.addEventListener("click", ()=>{
+  //  document.querySelector("#imgDesligarId").src="./img/bulb-on.png"
+//})
+
+//elementoDesligar.addEventListener("click", ()=>{
+   // document.querySelector("#imgDesligarId").src="./img/bulb-off.png"
+//})
+
+// function ligaDesliga(idButton) {
+
+//     //const elementoButton=document.querySelector("#" + idButton)
+//     const elementoButton = document.getElementById(idButton)
+//     let valorDeInner = elementoButton.innerHTML
+//     if(valorDeInner == "LIGUE" ){
+//         document.getElementById('lampada').src='./img/bulb-on.png';
+//         elementoButton.innerHTML = "DESLIGUE"
+//     }else{
+//         document.getElementById('lampada').src='./img/bulb-off.png';
+//         elementoButton.innerHTML = "LIGUE"
+//     }
+// }
+
+/* const elementoLigar=document.querySelector("#ligarId")
 const elementoDesligar=document.querySelector("#desligarId")
 
 elementoLigar.addEventListener("click", ()=>{
@@ -126,4 +151,36 @@ elementoLigar.addEventListener("click", ()=>{
 
 elementoDesligar.addEventListener("click", ()=>{
     document.querySelector("#imgDesligarId").src="./img/bulb-off.png"
-})
+}) */
+
+
+//Funções MATEMÁTICAS
+
+//EXPONENCIAÇÃO
+//console.log("Math.POW : " + Math.pow(10,2))
+
+//Número Randômico - retornar um número entre 0 e 1, porém o número assume uma dízima!
+//console.log("Math.random : " + Math.random())
+
+//Função de Arrendondamento para cima
+//console.log("Math.ceil : " + Math.ceil(Math.random()*3))
+
+//Função de Arrendondamento para cima e para baixo
+//console.log("Math.floor : " + Math.floor(Math.random()*3))
+
+//rgb(0, 0, 255);
+
+const elementoDiv = document.querySelector('.box')
+//elementoDiv.style.backgorundColor = "rgb(10, 44, 25)"
+var r = Math.round(Math.random()*255)
+var g = Math.round(Math.random()*255)
+var b = Math.round(Math.random()*255)
+//Concatenação
+//elementoDiv.style.backgroundColor = "rgb("+ r + "," + g + "," + b +")"
+
+//INTERPOLAÇÃO
+elementoDiv.style.backgroundColor = 'rgb(${r}, ${g}, ${b})'
+
+// Aperfeiçoamento da caixa de cores vivas!
+// Automatizar!
+// As cores devem se alterar automáticamente sem dar refresh na página!
